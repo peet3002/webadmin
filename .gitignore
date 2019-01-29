@@ -1,52 +1,34 @@
-# Prerequisites
-*.d
+.DS_STORE
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+/dist/
+/bazel-out
+/integration/bazel/bazel-*
+e2e_test.*
+node_modules
+tools/gulp-tasks/cldr/cldr-data/
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea/
+.settings/
+.vscode/launch.json
+*.swo
+modules/.settings
+modules/.vscode
 
-# Precompiled Headers
-*.gch
-*.pch
+# Don't check in secret files
+*secret.js
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# build-analytics
+.build-analytics
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# rollup-test output
+/modules/rollup-test/dist/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# User specific bazel settings
+.bazelrc.user
