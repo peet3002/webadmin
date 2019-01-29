@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+</head>
+
+<body>
+  <form autocomplete="off" novalidate [formGroup]="form" (submit)="login()">
+      <div id="login_div" class="main-div">
+          <h3>เข้าสู่ระบบแอดมิน</h3>
+          <input type="email" placeholder="อีเมล์..." formControlName="email" />
+          <input type="password" placeholder="รหัสผ่าน..." formControlName="password"/>
+          <button type="submit">เข้าสู่ระบบ</button>
+        </div>
+  </form>
+
+</body>
+
+</html>
