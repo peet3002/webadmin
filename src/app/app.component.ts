@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { Router, NavigationStart } from "@angular/router";
-import { AngularFireDatabase } from "angularfire2/database";
 
 @Component({
   selector: "app-root",
@@ -11,7 +10,7 @@ import { AngularFireDatabase } from "angularfire2/database";
 export class AppComponent {
   showHead: boolean = false;
 
-  constructor(private db: AngularFireDatabase, private router: Router) {
+  constructor(private router: Router) {
     router.events.forEach(event => {
       if (event instanceof NavigationStart) {
         if (event["url"] == "/login") {
@@ -22,9 +21,5 @@ export class AppComponent {
         }
       }
     });
-  }
-
-  addWiki(data: NgForm) {
-    this.db.list("/wikis").push(data.value);
   }
 }
